@@ -1,0 +1,15 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+.barre {
+   
+    height: 50px;
+    background-color: brown;
+}
+
+h2 {
+    color: white;
+}
