@@ -4,7 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
 
 class Alerte extends Model
 {
@@ -20,4 +22,5 @@ class Alerte extends Model
         return  $this->belongsTo(Aquereur::class,"id");
     }
     
+
 }

@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Agence extends Model
 {
     use HasFactory;
-
     protected $fillable =["num_matriculation","email","raison_sociale","num_telephone","adresse"];
 
 

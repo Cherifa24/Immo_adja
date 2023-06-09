@@ -15,4 +15,10 @@ class Type extends Model
         return $this->hasMany(Type::class,"id");
         
     }
+
+
+class Type extends Model
+{
+    use HasFactory;
+
 }
