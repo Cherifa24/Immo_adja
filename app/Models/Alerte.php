@@ -12,12 +12,12 @@ class Alerte extends Model
 {
     use HasFactory;
 
-    function biens()
+    function bien()
     {
         return  $this->hasOne(Bien::class,"id");
     }
 
-    function acquereurs()
+    function acquereur()
     {
         return  $this->belongsTo(Aquereur::class,"id");
     }

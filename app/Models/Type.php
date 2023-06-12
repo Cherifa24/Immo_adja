@@ -16,9 +16,4 @@ class Type extends Model
         
     }
 
-
-class Type extends Model
-{
-    use HasFactory;
-
 }
