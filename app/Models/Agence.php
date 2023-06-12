@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Agence extends Model
 {
     use HasFactory;
-    protected $fillable =["num_matriculation","email","raison_sociale","num_telephone","adresse"];
-
+    protected $fillable =["email","raison_sociale","contact","adresse"];
+    protected $primaryKey = "num_matricule";
 
     function biens()
     {
