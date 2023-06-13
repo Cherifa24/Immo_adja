@@ -12,8 +12,10 @@ class Agence extends Model
     protected $fillable =["email","raison_sociale","contact","adresse"];
     protected $primaryKey = "num_matricule";
 
-    function biens()
+    public function biens():HasMany
     {
         return $this->hasMany(Bien::class,"id");
     }
+
+    
 }
