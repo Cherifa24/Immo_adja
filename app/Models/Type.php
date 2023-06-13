@@ -16,4 +16,5 @@ class Type extends Model
         
     }
 
+    
 }

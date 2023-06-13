@@ -5,6 +5,9 @@ use App\Models\Acquereur;
 use App\Http\Controllers\AcquereurController;
 use App\Http\Controllers\AgenceController;
 use App\Http\Controllers\BienController;
+use App\Models\Agence;
+use App\Models\Type;
+use App\Models\Bien;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +21,29 @@ use App\Http\Controllers\BienController;
 */
 
 Route::get('/', function () {
+    $agence = new Agence();
+    $agence->raison_sociale = "raison";
+    $agence->contact = "141414";
+    $agence->adresse  = "lome";
+    $agence->email = "email@gmail.com";
+    $agence->save();
+
+    $type = new Type();
+    $type->designation = "designation";
+    $type->save();
+
+    $bien = new Bien();
+    $bien->etat = "etat";
+    $bien->localisation = "localisation";
+    $bien->prix_vente = "788";
+    $bien->date_publication = "02/02/2002";
+    $bien->description = "ezz";
+    $bien->galerie = "hgv";
+    $bien->type_offre = "maison";
+    $bien->id_type = $type->id;
+    $bien->id_agence = $agence->num_matricule;
+    $bien->save();
+
     return "hello";
 });
 /*
